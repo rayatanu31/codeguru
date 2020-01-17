@@ -1,11 +1,7 @@
 import java.util.Scanner;
 
-public class MyDummyCode 
-{
-
-	public static void main (String[] abc) {
-		System.out.println("Test");
-
+puclic class MyDummyCode {
+	public static void main(String[] abc) {
         	/* This reads the input provided by user
          	* using keyboard
          	*/
@@ -26,6 +22,5 @@ public class MyDummyCode
         
         	// Displaying the multiplication result
         	System.out.println("Output: "+product);
-
 	}
 }
