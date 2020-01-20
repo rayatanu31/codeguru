@@ -1,8 +1,14 @@
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class TrialBench extends Thread {
-	static HashMap<Integer, String> h = new HashMap<Integer, String>();
+	static ConcurrentHashMap<Integer, String> h = new ConcurrentHashMap<Integer, String>();
 
+        public String get(Integer key) {
+                if(h.containsKey(key)) {
+                        return h.get(key);
+                }
+                return "None";
+        }
 
 	public void run() {
 		try {
@@ -22,5 +28,12 @@ public class TrialBench extends Thread {
 		TrialBench tb = new TrialBench();
 		tb.start();
 
+		for (Object entry:h.entrySet()) {
+			//String x = entry;
+			System.out.println(entry);
+			Thread.sleep(1000);
+		}
+		
+		System.out.println(tb.get(1));
 	}
 }
