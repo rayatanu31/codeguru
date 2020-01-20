@@ -3,6 +3,12 @@ import java.util.HashMap;
 public class TrialBench extends Thread {
 	static HashMap<Integer, String> h = new HashMap<Integer, String>();
 
+        public String get(Integer key) {
+                if(h.containsKey(key)) {
+                        return h.get(key);
+                }
+                return "None";
+        }
 
 	public void run() {
 		try {
@@ -27,5 +33,7 @@ public class TrialBench extends Thread {
 			System.out.println(entry);
 			Thread.sleep(1000);
 		}
+
+		System.out.println(h.get(1));
 	}
 }
