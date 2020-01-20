@@ -22,5 +22,10 @@ public class TrialBench extends Thread {
 		TrialBench tb = new TrialBench();
 		tb.start();
 
+		for (Object entry:h.entrySet()) {
+			//String x = entry;
+			System.out.println(entry);
+			Thread.sleep(1000);
+		}
 	}
 }
