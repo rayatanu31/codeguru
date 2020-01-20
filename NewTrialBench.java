@@ -1,6 +1,7 @@
 import java.util.concurrent.ConcurrentHashMap;
 
 public class NewTrialBench {
+
 	private static ConcurrentHashMap<Integer, String> h = new ConcurrentHashMap<Integer, String>();
 
   public String get(Integer key) {
@@ -29,5 +30,6 @@ public class NewTrialBench {
 		System.out.println(ntb.get(1));
 		ntb.put(4,"TESTING TESTING");
 		System.out.println(ntb.get(4));
+
 	}
 }
