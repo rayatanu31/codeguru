@@ -13,13 +13,15 @@ public class NewTrialBench {
 
 
 	public void put(Integer key, String value) {
+		/*
 		synchronized(h) {
 			String obj = h.get(key);
 			if(obj == null) {
 				obj = value;
 				h.put(key,obj);
 			}
-		}
+		}*/
+		h.putIfAbsent(key, value);
 	}
 
 	public static void main(String[] abc) throws InterruptedException{
