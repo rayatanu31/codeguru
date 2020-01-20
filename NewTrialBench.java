@@ -3,12 +3,12 @@ import java.util.concurrent.ConcurrentHashMap;
 public class NewTrialBench {
 	private static ConcurrentHashMap<Integer, String> h = new ConcurrentHashMap<Integer, String>();
 
-        public String get(Integer key) {
-                if(h.containsKey(key)) {
-                        return h.get(key);
-                }
-                return "None";
-        }
+  public String get(Integer key) {
+          if(h.containsKey(key)) {
+                  return h.get(key);
+          }
+          return "None";
+  }
 
 
 	public void put(Integer key, String value) {
