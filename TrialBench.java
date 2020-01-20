@@ -1,7 +1,7 @@
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class TrialBench extends Thread {
-	static HashMap<Integer, String> h = new HashMap<Integer, String>();
+	static ConcurrentHashMap<Integer, String> h = new ConcurrentHashMap<Integer, String>();
 
         public String get(Integer key) {
                 if(h.containsKey(key)) {
@@ -33,7 +33,7 @@ public class TrialBench extends Thread {
 			System.out.println(entry);
 			Thread.sleep(1000);
 		}
-
-		System.out.println(h.get(1));
+		
+		System.out.println(tb.get(1));
 	}
 }
