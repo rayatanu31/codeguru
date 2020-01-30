@@ -12,6 +12,11 @@ public class Run1 {
 			}
 		}*/
 		h.putIfAbsent(key, value);
+		if(h.containsKey(key)) {
+			String val = h.get(key);
+			System.out.println("old value: " + val);
+			h.put(key, value);
+		}
 	}
 	
 	public static void main(String[] args) {
